@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- This container is used to contain all the caculator buttons -->
+    <div class="container"> 
+        <div class="Calculator">
+            <form id="myForm" onsubmit="return false;">
+                <div class="more">
+                    <button onclick="toggleMore()" >more</button>
+                    
+                </div>
+                <!-- This container is used to see the input of the character -->
+                <div class="display">
+
+                    <input type="text" name="display" id="display" readonly>
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="deleteAll()" class="input-button">
+                    <input type="button" value="%" onclick="addInput('%')" class="input-button">
+                    <input type="button" value="DE" onclick="deleteOne()" class="input-button">
+                    <input type="button" value="/" onclick="addInput('/')" class="input-button">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="addInput('7')" class="input-button">
+                    <input type="button" value="8" onclick="addInput('8')" class="input-button">
+                    <input type="button" value="9" onclick="addInput('9')" class="input-button">
+                    <input type="button" value="*" onclick="addInput('*')"class="input-button">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="addInput('4')"class="input-button">
+                    <input type="button" value="5" onclick="addInput('5')" class="input-button">
+                    <input type="button" value="6" onclick="addInput('6')" class="input-button">
+                    <input type="button" value="-" onclick="addInput('-')" class="input-button">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="addInput('1')" class="input-button">
+                    <input type="button" value="2" onclick="addInput('2')" class="input-button">
+                    <input type="button" value="3" onclick="addInput('3')" class="input-button">
+                    <input type="button" value="+" onclick="addInput('+')" class="input-button">
+                </div>
+                <div>
+                    <input type="button" value="00" onclick="addInput('00')" class="input-button">
+                    <input type="button" value="0" onclick="addInput('0')" class="input-button">
+                    <input type="button" value="." onclick="addInput('.')" class="input-button">
+                    <input type="button" value="=" onclick="calculate()" style="background-color: orange;" class="input-button">
+                </div>
+                <div id="square">
+                    <input type="button" value="√" onclick="calculateSquareRoot()" class="input-button">
+                </div>
+            </form>
+        </div>
+    </div>
+   <script src="sript.js"></script>
+</body>
+
+</html>
